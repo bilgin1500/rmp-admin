@@ -1,0 +1,17 @@
+#import "./fragmentAlbumFields.gql"
+#import "./fragmentAccountFields.gql"
+#import "./fragmentTrackFields.gql"
+mutation AlbumCreate($name: String!, $release_date: String, $created_at: Date, $created_by: String, $artist_id: Int!, $is_selected: Boolean) {
+  AlbumCreate(name: $name, release_date: $release_date, created_at: $created_at, created_by: $created_by, artist_id: $artist_id, is_selected: $is_selected) {
+    ...AlbumFields
+    accounts {
+      ...AccountFields
+    }
+    tracks {
+      ...TrackFields
+      accounts {
+        ...AccountFields
+      }
+    }
+  }
+}

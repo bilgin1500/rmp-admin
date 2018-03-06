@@ -1,0 +1,6 @@
+#import "./fragmentAccountFields.gql"
+mutation AccountUpdate($id:ID!, $name: String, $uuid: String, $updated_at: Date, $updated_by: String, $ref_id: Int, $ref_type: String) {
+  AccountUpdate(id: $id, name: $name, uuid: $uuid, updated_at: $updated_at, updated_by: $updated_by, ref_id: $ref_id, ref_type: $ref_type) {
+    ...AccountFields
+  }
+}

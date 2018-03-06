@@ -1,0 +1,6 @@
+#import "./fragmentArtistFields.gql"
+mutation ArtistUpdate($id:ID!, $name: String!, $updated_at: Date, $updated_by: String, $is_selected: Boolean) {
+  ArtistUpdate(id: $id, name: $name, updated_at: $updated_at, updated_by: $updated_by, is_selected: $is_selected) {
+    ...ArtistFields
+  }
+}

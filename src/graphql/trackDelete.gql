@@ -1,0 +1,6 @@
+#import "./fragmentTrackFields.gql"
+mutation TrackDelete($id:ID!) {
+  TrackDelete(id: $id) {
+    ...TrackFields
+  }
+}

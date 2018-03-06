@@ -1,0 +1,9 @@
+query SearchAccounts($account:String!, $keyword:String!, $type:String!) {
+  response: SearchAccounts(account:$account, keyword: $keyword, type: $type) {
+    id
+    name
+    url
+    image
+    detail
+  }
+}

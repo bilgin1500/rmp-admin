@@ -1,0 +1,11 @@
+fragment AccountFields on Account {
+  id
+  uuid
+  name
+  ref_id
+  ref_type
+  created_at
+  created_by
+  updated_at
+  updated_by
+}

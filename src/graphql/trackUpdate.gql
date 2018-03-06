@@ -1,0 +1,6 @@
+#import "./fragmentTrackFields.gql"
+mutation TrackUpdate($id:ID!, $name: String, $updated_at: Date, $updated_by: String, $album_id: Int, $is_selected: Boolean) {
+  TrackUpdate(id: $id, name: $name, updated_at: $updated_at, updated_by: $updated_by, album_id: $album_id, is_selected: $is_selected) {
+    ...TrackFields
+  }
+}

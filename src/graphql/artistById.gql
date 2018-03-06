@@ -1,0 +1,24 @@
+#import "./fragmentArtistFields.gql"
+#import "./fragmentAlbumFields.gql"
+#import "./fragmentTrackFields.gql"
+#import "./fragmentAccountFields.gql"
+query ArtistById($id:ID!) {
+  response: ArtistById(id: $id) {
+    ...ArtistFields
+    accounts {
+      ...AccountFields
+    }
+    albums {
+      ...AlbumFields
+      accounts {
+        ...AccountFields
+      }
+      tracks {
+        ...TrackFields
+        accounts {
+          ...AccountFields
+        }
+      }
+    }
+  }
+}

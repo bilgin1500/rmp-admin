@@ -1,0 +1,44 @@
+#import "./fragmentArtistFields.gql"
+#import "./fragmentAlbumFields.gql"
+#import "./fragmentTrackFields.gql"
+#import "./fragmentAccountFields.gql"
+query GetAccountContent($account:String!, $uuid:ID!, $type:String!) {
+  response: GetAccountContent(account:$account, uuid: $uuid, type: $type) {
+    artist {
+      ...ArtistFields
+      accounts {
+        ...AccountFields
+      }
+      albums {
+        ...AlbumFields
+        accounts {
+          ...AccountFields
+        }
+        tracks {
+          ...TrackFields
+          accounts {
+            ...AccountFields
+          }
+        }
+      }
+    }
+    album {
+      ...AlbumFields
+      accounts {
+        ...AccountFields
+      }
+      tracks {
+        ...TrackFields
+        accounts {
+          ...AccountFields
+        }
+      }
+    }
+    track {
+      ...TrackFields
+      accounts {
+        ...AccountFields
+      }
+    }
+  }
+}

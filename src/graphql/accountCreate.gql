@@ -1,0 +1,6 @@
+#import "./fragmentAccountFields.gql"
+mutation AccountCreate($name: String!, $uuid: String!, $created_at: Date, $created_by: String, $ref_id: Int!, $ref_type: String!) {
+  AccountCreate(name: $name, uuid: $uuid, created_at: $created_at, created_by: $created_by, ref_id: $ref_id, ref_type: $ref_type) {
+    ...AccountFields
+  }
+}

@@ -1,0 +1,11 @@
+fragment TrackFields on Track {
+  id
+  name
+  track_num
+  album_id
+  created_at
+  created_by
+  updated_at
+  updated_by
+  is_selected
+}

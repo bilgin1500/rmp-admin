@@ -1,0 +1,6 @@
+#import "./fragmentArtistFields.gql"
+mutation ArtistCreate($name: String!, $created_at: Date, $created_by: String, $is_selected: Boolean) {
+  ArtistCreate(name: $name, created_at: $created_at, created_by: $created_by, is_selected: $is_selected) {
+    ...ArtistFields
+  }
+}

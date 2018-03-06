@@ -1,0 +1,30 @@
+query ArtistsPaged(
+  $query: SearchQuery,
+  $order: String,
+  $sort: String,
+  $page: Int,
+  $pageSize: Int,
+  $columns: [String],
+  $withRelated: [String]
+  ) { 
+  response: ArtistsPaged(
+    query: $query,
+    order: $order,
+    sort: $sort,
+    page: $page,
+    pageSize: $pageSize,
+    columns: $columns,
+    withRelated: $withRelated
+    ) { 
+    pageInfo {
+      page
+      pageSize
+      rowCount
+      pageCount
+    }
+    artists {
+      id
+      name
+    }
+  } 
+}

@@ -1,0 +1,32 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "globals": {
+    "__CLIENT__": true,
+    "__DEVELOPMENT__": true,
+    "__DEVTOOLS__": true,
+    "__DISABLE_SSR__": true,
+    "__SERVER__": true,
+    "__dirname": true,
+    "socket": true,
+    "webpackIsomorphicTools": true
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "no-console":"off"
+  }
+}

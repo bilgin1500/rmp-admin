@@ -1,0 +1,6 @@
+#import "./fragmentAccountFields.gql"
+mutation AccountDelete($id:ID!) {
+  AccountDelete(id: $id) {
+    ...AccountFields
+  }
+}
